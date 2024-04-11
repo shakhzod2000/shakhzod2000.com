@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Deutsch mit Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <a href="#" class="logo">Quiz</a>
+
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="#">Über</a>
+                <a href="#">Dienste</a>
+                <a href="#">Kontakt</a>
+            </nav>
+        </header>
+
+        <div class="container">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1>Deutsches Quiz</h1>
+                    <div class="quiz-header">
+                        <span>Quiz Webseite Tutorial</span>
+                        <span class="header-score">Spielstand: 0 / 5</span>
+                    </div>
+
+                    <h2 class="question-text">Was bedeutet "Abstand"</h2>
+
+                    <div class="option-list">
+                        <!-- <div class="option">
+                            <span>A. distance</span>
+                        </div>
+                        <div class="option">
+                            <span>B. duration</span>
+                        </div>
+                        <div class="option">
+                            <span>C. direction</span>
+                        </div>    
+                        <div class="option">
+                            <span>D. destination</span>
+                        </div> -->
+                    </div>
+
+                    <div class="quiz-footer">
+                        <span class="question-total">1 von 5 Fragen</span>
+                        <button class="next-btn">Weiter</button>
+                    </div>
+                </div> 
+
+                <div class="result-box">
+                    <h2>Quiz Ergebnis!</h2>
+                    <div class="percentage-container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+
+                        <span class="score-text">Dein Ergebnis 0 von 5</span>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="goHome-btn">Zur Startseite</button>
+                        <button class="tryAgain-btn">Erneut versuchen</button>
+                    </div>
+                </div>
+            </section>
+            
+
+            <section class="home">
+                <div class="home-content">
+                    <h1>Lerne mit Quiz!</h1>
+                    <p>Lerne Deutsch mit Spaß</p>
+                    <button class="start-btn">Beginn Quiz</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="popup-info">
+        <h2>Quiz Anleitung</h2>
+        <span class="info">1. Wähle die richtige Antwort aus den gegebenen Optionen.</span>
+        <span class="info">2. Du hast 30 Sekunden Zeit.</span>
+        <span class="info">3. Du kannst keine Frage überspringen.</span>
+        <span class="info">4. Wenn die Zeit abläuft, wird die Frage als falsch gewertet.</span>
+        <span class="info">5. Viel Glück und viel Spaß beim Quiz.</span>
+    
+        <div class="btn-group">
+            <button class="info-btn exit-btn">Abbrechen</button>
+            <a href="#" class="info-btn continue-btn">Fortsetzen</a>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
