@@ -44,6 +44,41 @@ body {
     /* transition: color .3s ease; */
 }
 
+/* Media Query für kleinere Bildschirme, z.B. Smartphones */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        display: none; /* Verstecke die Navbar auf kleinen Bildschirmen */
+    }
+
+    .header {
+        padding: 10px; /* Reduziere den oberen und unteren Abstand in der Kopfzeile */
+    }
+
+    .logo {
+        font-size: 20px; /* Kleinere Schriftgröße für das Logo auf kleinen Bildschirmen */
+    }
+
+    .home-content {
+        max-width: 90%; /* Vergrößere den maximalen Breitenwert für den Inhalt */
+        transform: translateY(-50px); /* Kleinere vertikale Verschiebung */
+    }
+
+    .home-content h1 {
+        font-size: 42px; /* Kleinere Schriftgröße für den Titel */
+    }
+
+    .home-content p {
+        font-size: 18px; /* Kleinere Schriftgröße für den Text */
+    }
+
+    .home-content .start-btn {
+        width: 150px; /* Kleinere Schaltflächengröße */
+        height: 45px;
+        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
+    }
+}
+
+
 .navbar a:hover {
     color: #f1c40f;
     text-decoration: underline;
