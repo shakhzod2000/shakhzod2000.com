@@ -76,7 +76,91 @@ body {
         height: 45px;
         font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
     }
+
+    .popup-info {
+        width: 90%; /* Vergrößere die Breite des Popup-Fensters */
+    }
+
+    .popup-info h2 {
+        font-size: 20px; /* Kleinere Schriftgröße für den Titel */
+    }
+
+    .popup-info .info {
+        font-size: 14px; /* Kleinere Schriftgröße für den Text */
+    }
+
+    .popup-info .btn-group .info-btn {
+        width: 80px; /* Kleinere Schaltflächengröße */
+        height: 35px;
+        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
+    }
+
+    .quiz-section .quiz-box {
+        width: 90%; /* Vergrößere die Breite des Quiz-Feldes */
+    }
+
+    .quiz-box h1 {
+        font-size: 20px; /* Kleinere Schriftgröße für den Titel */
+    }
+
+    .quiz-box .question-text {
+        font-size: 20px; /* Kleinere Schriftgröße für den Text */
+    }
+
+    .option-list .option {
+        font-size: 14px; /* Kleinere Schriftgröße für die Optionen */
+    }
+
+    .quiz-footer .question-total {
+        font-size: 14px; /* Kleinere Schriftgröße für den Text */
+    }
+
+    .quiz-footer .next-btn {
+        width: 80px; /* Kleinere Schaltflächengröße */
+        height: 35px;
+        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
+    }
+
+    .result-box h2 {
+        font-size: 25px; /* Kleinere Schriftgröße für den Titel */
+    }
+
+    .result-box .percentage-container {
+        width: 250px; /* Vergrößere die Breite des Containers */
+    }
+
+    .percentage-container .circular-progress {
+        width: 200px; /* Vergrößere die Breite des Kreises */
+        height: 200px; /* Vergrößere die Höhe des Kreises */
+    }
+
+    .circular-progress .progress-value {
+        font-size: 35px; /* Kleinere Schriftgröße für den Wert */
+    }
+
+    .percentage-container .score-text {
+        font-size: 16px; /* Kleinere Schriftgröße für den Text */
+    }
+
+    .buttons button {
+        width: 140px; /* Kleinere Schaltflächengröße */
+        height: 45px;
+        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
+    }
+
+    .buttons button:nth-child(1) {
+        width: 140px; /* Kleinere Schaltflächengröße */
+        height: 45px;
+        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
+    }
+
+    .buttons button:nth-child(2) {
+        width: 140px; /* Kleinere Schaltflächengröße */
+        height: 45px;
+        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
+    }
 }
+
 
 
 .navbar a:hover {
