@@ -83,8 +83,9 @@ body {
         font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
     }
 
-    .popup-info {
-        width: 90%; /* Vergrößere die Breite des Popup-Fensters */
+    .popup-info.active {
+        width: calc(100vw * 0.7);
+        height: auto;
     }
 
     .popup-info h2 {
