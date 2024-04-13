@@ -44,130 +44,6 @@ body {
     /* transition: color .3s ease; */
 }
 
-/* Media Query für kleinere Bildschirme, z.B. Smartphones */
-@media (max-width: 750px) {
-    .navbar {
-        font-size: 10px;
-        margin-left: 10px;
-    }
-
-    .header {
-        padding: 10px; /* Reduziere den oberen und unteren Abstand in der Kopfzeile */
-    }
-
-    .logo {
-        font-size: 20px; /* Kleinere Schriftgröße für das Logo auf kleinen Bildschirmen */
-    }
-
-    .home-content {
-        width: calc(100vw * 0.2); /* Vergrößere den maximalen Breitenwert für den Inhalt */
-        height: calc(56.25vw * 0.2); /* Verwende ein 16:9-Verhältnis für die Höhe des Inhalts */
-        margin-left: 30px;
-        
-        /* flex-direction: column; */
-        /* align-items: center; */
-        /* height: unset;  */
-    }
-
-    .home-content h1 {
-        font-size: 36px; /* Kleinere Schriftgröße für den Titel */
-    }
-
-    .home-content p {
-        font-size: 22px; /* Kleinere Schriftgröße für den Text */
-    }
-
-    .home-content .start-btn {
-        width: 150px; /* Kleinere Schaltflächengröße */
-        height: 45px;
-        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
-    }
-
-    .popup-info.active {
-        width: calc(100vw * 0.7);
-        height: auto;
-    }
-
-    .popup-info h2 {
-        font-size: 20px; /* Kleinere Schriftgröße für den Titel */
-    }
-
-    .popup-info .info {
-        font-size: 14px; /* Kleinere Schriftgröße für den Text */
-    }
-
-    .popup-info .btn-group .info-btn {
-        width: 80px; /* Kleinere Schaltflächengröße */
-        height: 35px;
-        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
-    }
-
-    .quiz-section .quiz-box {
-        width: 90%; /* Vergrößere die Breite des Quiz-Feldes */
-    }
-
-    .quiz-box h1 {
-        font-size: 20px; /* Kleinere Schriftgröße für den Titel */
-    }
-
-    .quiz-box .question-text {
-        font-size: 20px; /* Kleinere Schriftgröße für den Text */
-    }
-
-    .option-list .option {
-        font-size: 14px; /* Kleinere Schriftgröße für die Optionen */
-    }
-
-    .quiz-footer .question-total {
-        font-size: 14px; /* Kleinere Schriftgröße für den Text */
-    }
-
-    .quiz-footer .next-btn {
-        width: 80px; /* Kleinere Schaltflächengröße */
-        height: 35px;
-        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
-    }
-
-    .result-box h2 {
-        font-size: 25px; /* Kleinere Schriftgröße für den Titel */
-    }
-
-    .result-box .percentage-container {
-        width: 250px; /* Vergrößere die Breite des Containers */
-    }
-
-    .percentage-container .circular-progress {
-        width: 200px; /* Vergrößere die Breite des Kreises */
-        height: 200px; /* Vergrößere die Höhe des Kreises */
-    }
-
-    .circular-progress .progress-value {
-        font-size: 35px; /* Kleinere Schriftgröße für den Wert */
-    }
-
-    .percentage-container .score-text {
-        font-size: 16px; /* Kleinere Schriftgröße für den Text */
-    }
-
-    .buttons button {
-        width: 140px; /* Kleinere Schaltflächengröße */
-        height: 45px;
-        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
-    }
-
-    .buttons button:nth-child(1) {
-        width: 140px; /* Kleinere Schaltflächengröße */
-        height: 45px;
-        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
-    }
-
-    .buttons button:nth-child(2) {
-        width: 140px; /* Kleinere Schaltflächengröße */
-        height: 45px;
-        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
-    }
-}
-
 
 
 .navbar a:hover {
@@ -186,7 +62,7 @@ body {
 }
 
 .container {
-    display: flex;
+    display: flex; 
     height: 100vh;
     width: 200%;
 }
@@ -218,23 +94,25 @@ body {
     z-index: 3;
 }
 
+
 .home-content {
     max-width: 600px;
     transform: translateY(-130px)  translateX(-180px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 3;    
+    z-index: 3;
 }
 
 .home-content h1 {
-    font-size: 78px;
+    font-size: 36px;
+    color: #f1c40f;
     font-weight: 700;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .home-content p {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 650;
     /* font-weight: 500; */
     text-align: center;
@@ -243,14 +121,14 @@ body {
 }
 
 .home-content .start-btn {
-    width: 190px;
-    height: 55px;
+    width: 140px;
+    height: 45px;
     background: #f1c40f;
     border: 2px solid #fff;
     outline: none;
     border-radius: 6px;
     box-shadow: 0 0 10px rgb(247, 243, 12);
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
     letter-spacing: 1px;
     font-weight: 600;
@@ -482,6 +360,7 @@ body {
     margin: 10px 0;
     cursor: pointer;
     pointer-events: none;
+    margin-left: auto;
 }
 
 .quiz-footer .next-btn.active {
@@ -598,4 +477,139 @@ body {
 .buttons button:nth-child(1):hover {
     background: #f1c40f;
     border-color: black;
+}
+
+/* Media Query für kleinere Bildschirme, z.B. Smartphones */
+@media (max-width: 750px) {
+    .navbar a {
+        font-size: 10px;
+        margin-left: 10px;
+    }
+
+    .header {
+        padding: 10px; /* Reduziere den oberen und unteren Abstand in der Kopfzeile */
+    }
+
+    .logo {
+        font-size: 12px; /* Kleinere Schriftgröße für das Logo auf kleinen Bildschirmen */
+    }
+
+    .home {
+        flex-direction: column; /* Ändere die Ausrichtung des Inhalts auf vertikal */
+        align-items: center; /* Zentriere den Inhalt vertikal */
+        height: unset; /* Entferne die feste Höhe des Startseitenbereichs */
+    }
+
+    .home-content {
+        width: calc(100vw * 0.2); /* Vergrößere den maximalen Breitenwert für den Inhalt */
+        height: calc(56.25vw * 0.2); /* Verwende ein 16:9-Verhältnis für die Höhe des Inhalts */
+        margin-left: 30px;
+        transform: translateY(-100px) translateX(-130px);
+        align-items: center;
+    }
+
+    .home-content h1 {
+        font-size: 20px; /* Kleinere Schriftgröße für den Titel */
+    }
+
+    .home-content p {
+        font-size: 14px; /* Kleinere Schriftgröße für den Text */
+    }
+
+    .home-content .start-btn {
+        width: 70px;
+        height: 55px;
+        font-size: 7px;
+    }
+
+    .popup-info.active {
+        width: calc(100vw * 0.7);
+        height: auto;
+    }
+
+    .popup-info h2 {
+        font-size: 14px;
+        color:aqua;
+    }
+
+    .popup-info .info {
+        font-size: 10px;
+    }
+
+    .popup-info .btn-group .info-btn {
+        width: 60px; 
+        height: 30px;
+        font-size: 8px;
+    }
+
+    .quiz-section .quiz-box {
+        width: calc(100vw * 0.7);
+        height: auto;
+    }
+
+    .quiz-box h1 {
+        font-size: 18px; /* Kleinere Schriftgröße für den Titel */
+    }
+
+    .quiz-box .question-text {
+        font-size: 16px; /* Kleinere Schriftgröße für den Text */
+    }
+
+    .option-list .option {
+        font-size: 12px; /* Kleinere Schriftgröße für die Optionen */
+    }
+
+    .quiz-header .question-total {
+        font-size: 12px; /* Kleinere Schriftgröße für den Text */
+    }
+
+    .quiz-header .header-score {
+        font-size: 10px; /* Kleinere Schriftgröße für den Text */
+    }
+
+    .quiz-footer .next-btn {
+        width: 80px; /* Kleinere Schaltflächengröße */
+        height: 35px;
+        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
+        margin-left: auto;
+    }
+
+    .result-box h2 {
+        font-size: 25px; /* Kleinere Schriftgröße für den Titel */
+    }
+
+    .result-box .percentage-container {
+        width: 250px; /* Vergrößere die Breite des Containers */
+    }
+
+    .percentage-container .circular-progress {
+        width: 200px; /* Vergrößere die Breite des Kreises */
+        height: 200px; /* Vergrößere die Höhe des Kreises */
+    }
+
+    .circular-progress .progress-value {
+        font-size: 35px; /* Kleinere Schriftgröße für den Wert */
+    }
+
+    .percentage-container .score-text {
+        font-size: 16px; /* Kleinere Schriftgröße für den Text */
+    }
+
+    .buttons button {
+        width: 140px; /* Kleinere Schaltflächengröße */
+        height: 45px;
+        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
+    }
+
+    .buttons button:nth-child(1) {
+        width: 140px; /* Kleinere Schaltflächengröße */
+        height: 45px;
+        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
+    }
+
+    .buttons button:nth-child(2) {
+        width: 140px; /* Kleinere Schaltflächengröße */
+        height: 45px;
+        font-size: 14px; /* Kleinere Schriftgröße für den Button-Text */
+    }
 }
