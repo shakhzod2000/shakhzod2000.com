@@ -219,5 +219,5 @@ const questions2 = [
             "D. schlecht"
         ]
     }
-];
+]
 
