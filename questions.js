@@ -1,4 +1,4 @@
-let questions = [
+const questions = [
     {
             numb: 1,
             question: "Was bedeutet 'afraid'?",
@@ -219,4 +219,4 @@ let questions = [
                 "D. toll"
             ]
     }
-];
+]
