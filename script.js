@@ -6,16 +6,20 @@ const exitBtn = document.querySelector('.exit-btn');
 const main = document.querySelector('.main');
 const germanBtn = document.querySelector('.german-btn');
 const uzbekBtn = document.querySelector('.uzbek-btn');
+const essentialsPopup = document.querySelector('.essentials-popup');
+const essentialsBtn = document.querySelector('.essentials-btn');
+const backToLang = document.querySelector('.backToLang-btn');
 const unitPopup = document.querySelector('.unit-popup');
+const backToEss = document.querySelector('.backToEss-btn');
 const unitPopupUz = document.querySelector('.unit-popup-uz');
-const backBtn = document.querySelector('.back-btn');
-const orqaBtn = document.querySelector('.orqa-btn');
-const btnUnit = document.querySelector('.unit-list');
-const btnUzUnit = document.querySelector('.unit-list-uz');
-const btnUnit1 = document.querySelector('.btn1');
-const btnUnit2 = document.querySelector('.btn2');
-const btnUnit3 = document.querySelector('.btn3');
-const btnUzUnit1 = document.querySelector('.tugma1');
+const backToEssUz = document.querySelector('.backToEssUz-btn');
+const DeBtnUnit = document.querySelector('.unit-list');
+const DeBtnUnit1 = document.querySelector('.btn1');
+const DeBtnUnit2 = document.querySelector('.btn2');
+const DeBtnUnit3 = document.querySelector('.btn3');
+const DeBtnUnit4 = document.querySelector('.btn4');
+const UzBtnUnit = document.querySelector('.unit-list-uz');
+const UzBtnUnit1 = document.querySelector('.tugma1');
 const quizSection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 const optionList = document.querySelector('.option-list');
@@ -35,34 +39,41 @@ startBtn.onclick = () => {
     main.classList.add('active');
 }
 
+let activeLanguage;
+
+germanBtn.onclick = () => {
+    popupInfo.classList.remove('active');
+    essentialsPopup.classList.add('active');
+    activeLanguage = 'De';
+}
+
+uzbekBtn.onclick = () => {
+    popupInfo.classList.remove('active');
+    essentialsPopup.classList.add('active');
+    activeLanguage = 'Uz';
+}
+
 exitBtn.onclick = () => {
     popupInfo.classList.remove('active');
     main.classList.remove('active');
 }
 
-germanBtn.onclick = () => {
-    popupInfo.classList.remove('active');
-    unitPopup.classList.add('active');
+essentialsBtn.onclick = () => {
+    essentialsPopup.classList.remove('active');
+    if (activeLanguage == 'De') 
+        unitPopup.classList.add('active');
+    else
+        unitPopupUz.classList.add('active');
 }
 
-uzbekBtn.onclick = () => {
-    popupInfo.classList.remove('active');
-    unitPopupUz.classList.add('active');
-}
-
-backBtn.onclick = () => {
+backToLang.onclick = () => {
     popupInfo.classList.add('active');
-    unitPopup.classList.remove('active');
-}
-
-orqaBtn.onclick = () => {
-    popupInfo.classList.add('active');
-    unitPopupUz.classList.remove('active');
+    essentialsPopup.classList.remove('active');
 }
 
 let activeUnit;
 
-btnUnit.onclick = () => {
+DeBtnUnit.onclick = () => {
     unitPopup.classList.remove('active');
     main.classList.remove('active');
     quizSection.classList.add('active');
@@ -75,7 +86,12 @@ btnUnit.onclick = () => {
     headerScore();
 }
 
-btnUzUnit.onclick = () => {
+backToEss.onclick = () => {
+    essentialsPopup.classList.add('active');
+    unitPopup.classList.remove('active');
+}
+
+UzBtnUnit.onclick = () => {
     unitPopupUz.classList.remove('active');
     main.classList.remove('active');
     quizSection.classList.add('active');
@@ -88,18 +104,28 @@ btnUzUnit.onclick = () => {
     headerScore();
 }
 
-btnUnit1.onclick = () => {
+backToEssUz.onclick = () => {
+    essentialsPopup.classList.add('active');
+    unitPopupUz.classList.remove('active');
+}
+
+DeBtnUnit1.onclick = () => {
     questions = questions1;
 }
 
-btnUnit2.onclick = () => {
+DeBtnUnit2.onclick = () => {
     questions = questions2;
 }
-btnUnit3.onclick = () => {
+
+DeBtnUnit3.onclick = () => {
     questions = questions3;
 }
 
-btnUzUnit1.onclick = () => {
+DeBtnUnit4.onclick = () => {
+    questions = questions4;
+}
+
+UzBtnUnit1.onclick = () => {
     questions = savollar1;
 }
 
