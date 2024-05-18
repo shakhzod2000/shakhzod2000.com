@@ -1,4 +1,6 @@
-const questions2 = [
+// document.addEventListener('DOMContentLoaded', () => {
+
+let questions2 = [
     {
         numb: 1,
         question: "adventure",
@@ -219,5 +221,6 @@ const questions2 = [
             "D. schlecht"
         ]
     }
-]
+];
 
+// });
