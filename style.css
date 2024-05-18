@@ -531,7 +531,7 @@ body {
     color:white;
 }
 
-.quiz-footer .next-btn {
+.quiz-footer .next-btn, .backToUnit-btn {
     width: 100px;
     height: 45px;
     background: grey;
@@ -545,17 +545,17 @@ body {
     margin: 10px 0;
     cursor: pointer;
     pointer-events: none;
-    margin-left: auto;
+    margin-left: 0;
 }
 
-.quiz-footer .next-btn.active {
+.quiz-footer .next-btn.active, .backToUnit-btn.active {
     pointer-events: auto;
     background:blueviolet;
     color: hsl(187, 60%, 97%);
     border-color: white;
 }
 
-.quiz-footer .next-btn:hover {
+.quiz-footer .next-btn:hover, .backToUnit-btn:hover {
     background: rgb(253, 243, 253);
     border-color: blueviolet;
     color:blueviolet;
@@ -841,9 +841,9 @@ body {
         font-size: 16px;
     }
 
-    .quiz-footer .next-btn {
+    .quiz-footer .next-btn, .backToUnit-btn {
         font-size: 16px;
-        margin-left: auto;
+        margin-left: 0;
     }
 
     .quiz-section .result-box {
