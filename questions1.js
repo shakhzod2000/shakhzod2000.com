@@ -47,7 +47,7 @@ let questions1 = [
     },
     {
             numb: 5,
-            question: "attack",
+            question: "to attack",
             answer: "C. angreifen",
             options: [
                 "A. verteidigen",
