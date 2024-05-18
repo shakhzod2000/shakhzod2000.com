@@ -20,6 +20,7 @@ const quizSection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 const optionList = document.querySelector('.option-list');
 const backToUnit = document.querySelector('.backToUnit-btn');
+const backToUnitUz = document.querySelector('.backToUnit-btn');
 const nextBtn = document.querySelector('.next-btn');
 const resultBox = document.querySelector('.result-box');
 const tryAgain = document.querySelector('.tryAgain-btn');
@@ -59,12 +60,16 @@ orqaBtn.onclick = () => {
     unitPopupUz.classList.remove('active');
 }
 
+let activeUnit;
+
 btnUnit.onclick = () => {
     unitPopup.classList.remove('active');
     main.classList.remove('active');
     quizSection.classList.add('active');
     quizBox.classList.add('active');
-
+    backToUnit.classList.add('active');
+    activeUnit = 'De';
+    
     showQuestions(0);
     questionCounter(1);
     headerScore();
@@ -75,7 +80,9 @@ btnUzUnit.onclick = () => {
     main.classList.remove('active');
     quizSection.classList.add('active');
     quizBox.classList.add('active');
-
+    backToUnitUz.classList.add('active');
+    activeUnit = 'Uz';
+    
     showQuestions(0);
     questionCounter(1);
     headerScore();
@@ -98,9 +105,14 @@ btnUzUnit1.onclick = () => {
 
 backToUnit.onclick = () => {
     quizSection.classList.remove('active');
-    unitPopup.classList.add('active');
     main.classList.add('active');
-
+    nextBtn.classList.remove('active');
+    
+    if (activeUnit == 'De')
+        unitPopup.classList.add('active');
+    else
+        unitPopupUz.classList.add('active');
+        
     questionCount = 0;
     questionNumb = 1;
     userScore = 0;
