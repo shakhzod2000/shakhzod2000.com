@@ -47,7 +47,7 @@ let questions3 = [
     },
     {
         numb: 5,
-        question: "comprehend",
+        question: "to comprehend",
         answer: "B. verstehen",
         options: [
             "A. laufen",
@@ -58,7 +58,7 @@ let questions3 = [
     },
     {
         numb: 6,
-        question: "describe",
+        question: "to describe",
         answer: "A. beschreiben",
         options: [
             "A. beschreiben",
@@ -80,7 +80,7 @@ let questions3 = [
     },
     {
         numb: 8,
-        question: "fail",
+        question: "to fail",
         answer: "D. scheitern",
         options: [
             "A. fallen",
@@ -168,7 +168,7 @@ let questions3 = [
     },
     {
         numb: 16,
-        question: "solve",
+        question: "to solve",
         answer: "B. lösen",
         options: [
             "A. finden",
@@ -190,7 +190,7 @@ let questions3 = [
     },
     {
         numb: 18,
-        question: "suppose",
+        question: "to suppose",
         answer: "D. annehmen",
         options: [
             "A. glauben",
