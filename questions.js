@@ -1,29 +1,31 @@
-const questions = [
+// document.addEventListener('DOMContentLoaded', () => {
+
+let questions1 = [
     {
-            numb: 1,
-            question: "Was bedeutet 'afraid'?",
-            answer: "C. ängstlich",
-            options: [
-                "A. verärgert",
-                "B. erfreut",
-                "C. ängstlich",
-                "D. überrascht"
-            ]
+        numb: 1,
+        question: "afraid",
+        answer: "C. ängstlich",
+        options: [
+            "A. verärgert",
+            "B. erfreut",
+            "C. ängstlich",
+            "D. überrascht"
+        ]
     },
     {
-            numb: 2,
-            question: "Was bedeutet 'agree'?",
-            answer: "A. zustimmen",
-            options: [
-                "A. zustimmen",
-                "B. ablehnen",
-                "C. verweigern",
-                "D. protestieren"
-            ]
+        numb: 2,
+        question: "to agree",
+        answer: "A. zustimmen",
+        options: [
+            "A. zustimmen",
+            "B. ablehnen",
+            "C. verweigern",
+            "D. protestieren"
+        ]
     },
     {
             numb: 3,
-            question: "Was bedeutet 'angry'?",
+            question: "angry",
             answer: "D. wütend",
             options: [
                 "A. traurig",
@@ -34,7 +36,7 @@ const questions = [
     },
     {
             numb: 4,
-            question: "Was bedeutet 'arrive'?",
+            question: "to arrive",
             answer: "B. ankommen",
             options: [
                 "A. abreisen",
@@ -45,7 +47,7 @@ const questions = [
     },
     {
             numb: 5,
-            question: "Was bedeutet 'attack'?",
+            question: "attack",
             answer: "C. angreifen",
             options: [
                 "A. verteidigen",
@@ -56,7 +58,7 @@ const questions = [
     },
     {
             numb: 6,
-            question: "Was bedeutet 'bottom'?",
+            question: "bottom",
             answer: "A. unten",
             options: [
                 "A. unten",
@@ -67,7 +69,7 @@ const questions = [
     },
     {
             numb: 7,
-            question: "Was bedeutet 'clever'?",
+            question: "clever",
             answer: "B. klug",
             options: [
                 "A. dumm",
@@ -78,7 +80,7 @@ const questions = [
     },
     {
             numb: 8,
-            question: "Was bedeutet 'cruel'?",
+            question: "cruel",
             answer: "D. grausam",
             options: [
                 "A. nett",
@@ -89,7 +91,7 @@ const questions = [
     },
     {
             numb: 9,
-            question: "Was bedeutet 'finally'?",
+            question: "finally",
             answer: "C. endlich",
             options: [
                 "A. sofort",
@@ -99,19 +101,19 @@ const questions = [
             ]
     },
     {
-            numb: 10,
-            question: "Was bedeutet 'hide'?",
-            answer: "A. verstecken",
-            options: [
-                "A. verstecken",
-                "B. zeigen",
-                "C. suchen",
-                "D. finden"
-            ]
+        numb: 10,
+        question: "to hide",
+        answer: "A. verstecken",
+        options: [
+            "A. verstecken",
+            "B. zeigen",
+            "C. suchen",
+            "D. finden"
+        ]
     },
     {
             numb: 11,
-            question: "Was bedeutet 'hunt'?",
+            question: "to hunt",
             answer: "D. jagen",
             options: [
                 "A. fangen",
@@ -122,7 +124,7 @@ const questions = [
     },
     {
             numb: 12,
-            question: "Was bedeutet 'lot'?",
+            question: "lot",
             answer: "B. viel",
             options: [
                 "A. wenig",
@@ -133,7 +135,7 @@ const questions = [
     },
     {
             numb: 13,
-            question: "Was bedeutet 'middle'?",
+            question: "middle",
             answer: "C. Mitte",
             options: [
                 "A. oben",
@@ -144,7 +146,7 @@ const questions = [
     },
     {
             numb: 14,
-            question: "Was bedeutet 'moment'?",
+            question: "moment",
             answer: "A. Moment",
             options: [
                 "A. Moment",
@@ -155,7 +157,7 @@ const questions = [
     },
     {
             numb: 15,
-            question: "Was bedeutet 'pleased'?",
+            question: "pleased",
             answer: "D. erfreut",
             options: [
                 "A. verärgert",
@@ -166,7 +168,7 @@ const questions = [
     },
     {
             numb: 16,
-            question: "Was bedeutet 'promise'?",
+            question: "to promise",
             answer: "B. versprechen",
             options: [
                 "A. brechen",
@@ -177,7 +179,7 @@ const questions = [
     },
     {
             numb: 17,
-            question: "Was bedeutet 'reply'?",
+            question: "to reply",
             answer: "C. antworten",
             options: [
                 "A. fragen",
@@ -188,7 +190,7 @@ const questions = [
     },
     {
             numb: 18,
-            question: "Was bedeutet 'safe'?",
+            question: "safe",
             answer: "A. sicher",
             options: [
                 "A. sicher",
@@ -199,7 +201,7 @@ const questions = [
     },
     {
             numb: 19,
-            question: "Was bedeutet 'trick'?",
+            question: "trick",
             answer: "D. Trick",
             options: [
                 "A. Spiel",
@@ -210,7 +212,7 @@ const questions = [
     },
     {
             numb: 20,
-            question: "Was bedeutet 'well'?",
+            question: "well",
             answer: "B. gut",
             options: [
                 "A. schlecht",
@@ -219,4 +221,6 @@ const questions = [
                 "D. toll"
             ]
     }
-]
+];
+
+// });
