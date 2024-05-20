@@ -145,6 +145,7 @@ body {
     position: fixed;
     bottom: 0;
     padding: 10px 20px;
+    font-size: 13px;
     z-index: 2;
 }
 
