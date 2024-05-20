@@ -18,6 +18,7 @@ const DeBtnUnit1 = document.querySelector('.btn1');
 const DeBtnUnit2 = document.querySelector('.btn2');
 const DeBtnUnit3 = document.querySelector('.btn3');
 const DeBtnUnit4 = document.querySelector('.btn4');
+const DeBtnUnit5 = document.querySelector('.btn5');
 const UzBtnUnit = document.querySelector('.unit-list-uz');
 const UzBtnUnit1 = document.querySelector('.tugma1');
 const quizSection = document.querySelector('.quiz-section');
@@ -123,6 +124,10 @@ DeBtnUnit3.onclick = () => {
 
 DeBtnUnit4.onclick = () => {
     questions = questions4;
+}
+
+DeBtnUnit5.onclick = () => {
+    questions = questions5;
 }
 
 UzBtnUnit1.onclick = () => {
