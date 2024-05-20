@@ -141,6 +141,13 @@ body {
     box-shadow: none;
 }
 
+.footer {
+    position: fixed;
+    bottom: 0;
+    padding: 10px 20px;
+    z-index: 2;
+}
+
 .popup-info {
     position: absolute;
     top: 50%;
