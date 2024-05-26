@@ -13,14 +13,18 @@ const unitPopup = document.querySelector('.unit-popup');
 const backToEss = document.querySelector('.backToEss-btn');
 const unitPopupUz = document.querySelector('.unit-popup-uz');
 const backToEssUz = document.querySelector('.backToEssUz-btn');
-const DeBtnUnit = document.querySelector('.unit-list');
+const DeBtnUnit = document.querySelector('.unit-container');
 const DeBtnUnit1 = document.querySelector('.btn1');
 const DeBtnUnit2 = document.querySelector('.btn2');
 const DeBtnUnit3 = document.querySelector('.btn3');
 const DeBtnUnit4 = document.querySelector('.btn4');
 const DeBtnUnit5 = document.querySelector('.btn5');
-const UzBtnUnit = document.querySelector('.unit-list-uz');
+const DeBtnUnit6 = document.querySelector('.btn6');
+const DeBtnUnit7 = document.querySelector('.btn7');
+const DeBtnUnit11 = document.querySelector('.btn11');
+const UzBtnUnit = document.querySelector('.unit-container-uz');
 const UzBtnUnit1 = document.querySelector('.tugma1');
+const UzBtnUnit2 = document.querySelector('.tugma2');
 const quizSection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 const optionList = document.querySelector('.option-list');
@@ -130,8 +134,24 @@ DeBtnUnit5.onclick = () => {
     questions = questions5;
 }
 
+DeBtnUnit6.onclick = () => {
+    questions = questions6;
+}
+
+DeBtnUnit7.onclick = () => {
+    questions = questions7;
+}
+
+DeBtnUnit11.onclick = () => {
+    questions = questions11;
+}
+
 UzBtnUnit1.onclick = () => {
     questions = savollar1;
+}
+
+UzBtnUnit2.onclick = () => {
+    questions = savollar2;
 }
 
 backToUnit.onclick = () => {
@@ -197,9 +217,6 @@ function showQuestions(index) {
     
     optionList.innerHTML = optionTag;
 
-    // const option = document.querySelectorAll('.option');
-    // for (let i = 0; i < option.length; i++) // .length gibt die Anzahl der Elemente zurück.
-    //     option[i].setAttribute('click', 'optionSelected(this)');
     const options = document.querySelectorAll('.option');
     options.forEach((option) => {
         option.addEventListener('click', function() {
