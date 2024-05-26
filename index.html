@@ -1,202 +1,286 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Deutsch mit Quiz</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+// document.addEventListener('DOMContentLoaded', () => {
 
-<body>
-    <main class="main">
-        <header class="header">
-            <a href="#" class="logo">Quiz</a>
+const startBtn = document.querySelector('.start-btn');
+const popupInfo = document.querySelector('.popup-info');
+const exitBtn = document.querySelector('.exit-btn');
+const main = document.querySelector('.main');
+const germanBtn = document.querySelector('.german-btn');
+const uzbekBtn = document.querySelector('.uzbek-btn');
+const essentialsPopup = document.querySelector('.essentials-popup');
+const essentialsBtn = document.querySelector('.essentials-btn');
+const backToLang = document.querySelector('.backToLang-btn');
+const unitPopup = document.querySelector('.unit-popup');
+const backToEss = document.querySelector('.backToEss-btn');
+const unitPopupUz = document.querySelector('.unit-popup-uz');
+const backToEssUz = document.querySelector('.backToEssUz-btn');
+const DeBtnUnit = document.querySelector('.unit-container');
+const DeBtnUnit1 = document.querySelector('.btn1');
+const DeBtnUnit2 = document.querySelector('.btn2');
+const DeBtnUnit3 = document.querySelector('.btn3');
+const DeBtnUnit4 = document.querySelector('.btn4');
+const DeBtnUnit5 = document.querySelector('.btn5');
+const DeBtnUnit6 = document.querySelector('.btn6');
+const DeBtnUnit7 = document.querySelector('.btn7');
+const DeBtnUnit11 = document.querySelector('.btn11');
+const UzBtnUnit = document.querySelector('.unit-container-uz');
+const UzBtnUnit1 = document.querySelector('.tugma1');
+const UzBtnUnit2 = document.querySelector('.tugma2');
+const quizSection = document.querySelector('.quiz-section');
+const quizBox = document.querySelector('.quiz-box');
+const optionList = document.querySelector('.option-list');
+const backToUnit = document.querySelector('.backToUnit-btn');
+const backToUnitUz = document.querySelector('.backToUnit-btn');
+const nextBtn = document.querySelector('.next-btn');
+const resultBox = document.querySelector('.result-box');
+const tryAgain = document.querySelector('.tryAgain-btn');
+const goHome = document.querySelector('.goHome-btn');
 
-            <nav class="navbar">
-                <a href="#">Home</a>
-                <a href="#">Über</a>
-                <a href="#">Dienste</a>
-                <a href="mailto:sshermatov50@gmail.com">Kontakt</a>
-            </nav>
-        </header>
+let questionCount = 0;
+let questionNumb = 1;
+let userScore = 0;
 
-        <div class="container">
-            <section class="quiz-section">
-                <div class="quiz-box">
-                    <h1>Deutsches Quiz</h1>
-                    <div class="quiz-header">
-                        <span class="question-total">1 von 5 Fragen</span>
-                        <span class="header-score">Spielstand: 0 / 5</span>
-                    </div>
-                    
-                    <h2 id="question" class="question-text"></h2>
-                    
-                    <div class="option-list"></div>
-                    
-                    <div class="quiz-footer">
-                        <button class="backToUnit-btn">Zurück</button>
-                        <button class="next-btn">Weiter</button>
-                    </div>
-                </div> 
+startBtn.onclick = () => {
+    popupInfo.classList.add('active');
+    main.classList.add('active');
+}
 
-                <div class="result-box">
-                    <h2>Quiz Ergebnis!</h2>
-                    <div class="percentage-container">
-                        <div class="circular-progress">
-                            <span class="progress-value">0%</span>
-                        </div>
+let activeLanguage;
 
-                        <span class="score-text">Dein Ergebnis 0 von 5</span>
-                    </div>
+germanBtn.onclick = () => {
+    popupInfo.classList.remove('active');
+    essentialsPopup.classList.add('active');
+    activeLanguage = 'De';
+}
 
-                    <div class="buttons">
-                        <button class="goHome-btn">Zur Startseite</button>
-                        <button class="tryAgain-btn">Erneut versuchen</button>
-                    </div>
-                </div>
-            </section>
-            
+uzbekBtn.onclick = () => {
+    popupInfo.classList.remove('active');
+    essentialsPopup.classList.add('active');
+    activeLanguage = 'Uz';
+}
 
-            <section class="home">
-                <div class="home-content">
-                    <h1>Essential Deutsch</h1>
-                    <p>Lerne Deutsch mit Spaß</p>
-                    <button class="start-btn">Beginn Quiz</button>
-                </div>
-            </section>
-        </div>
+exitBtn.onclick = () => {
+    popupInfo.classList.remove('active');
+    main.classList.remove('active');
+}
 
-        <footer class="footer">
-            <p>&copy; 2024 Shakhzod Shermatov. Alle Rechte vorbehalten.</p>
-        </footer>    
-    </main>
+essentialsBtn.onclick = () => {
+    essentialsPopup.classList.remove('active');
+    if (activeLanguage == 'De') 
+        unitPopup.classList.add('active');
+    else
+        unitPopupUz.classList.add('active');
+}
 
-    <div class="popup-info">
-        <h2>Welche Sprache möchtest du lernen?</h2>
-        <div class="languages-btn">
-            <button class="info-btn german-btn"></button>
-            <button class="info-btn english-btn"></button>
-            <button class="info-btn uzbek-btn"></button>
-        </div>
-        <div class="btn-group">
-            <button class="exit-btn">Abbrechen</button>
-        </div>
-    </div>
+backToLang.onclick = () => {
+    popupInfo.classList.add('active');
+    essentialsPopup.classList.remove('active');
+}
 
-    <div class="essentials-popup">
-        <h2>Welches Buch möchtest du üben?</h2>
-        <div class="essentials-btn">
-            <button class="essential E1">Essential 1</button>
-            <button class="essential E2">Essential 2</button>
-            <button class="essential E3">Essential 3</button>
-        </div>
-        <div class="essentials-btn">
-            <button class="essential E4">Essential 4</button>
-            <button class="essential E5">Essential 5</button>
-            <button class="essential E6">Essential 6</button>
-        </div>
-        <div class="btn-group">
-            <button class="backToLang-btn">Zurück</button>
-        </div>
-    </div>
+let activeUnit;
 
-    <div class="unit-popup">
-        <h2>Wähle eine Lektion</h2>
-        <div class="unit-container">
-            <div class="unit-list">
-                <button class="unit btn1">1</button>
-                <button class="unit btn2">2</button>
-                <button class="unit btn3">3</button>
-                <button class="unit btn4">4</button>
-                <button class="unit btn5">5</button>
-                <button class="unit btn6">6</button>
-                <button class="unit btn7">7</button>
-                <button class="unit btn8">8</button>
-                <button class="unit btn9">9</button>
-                <button class="unit btn10">10</button>
-            </div>
-            <div class="unit-list">
-                <button class="unit btn11">11</button>
-                <button class="unit btn12">12</button>
-                <button class="unit btn13">13</button>
-                <button class="unit btn14">14</button>
-                <button class="unit btn15">15</button>
-                <button class="unit btn16">16</button>
-                <button class="unit btn17">17</button>
-                <button class="unit btn18">18</button>
-                <button class="unit btn19">19</button>
-                <button class="unit btn20">20</button>
-            </div>
-            <div class="unit-list">
-                <button class="unit btn21">21</button>
-                <button class="unit btn22">22</button>
-                <button class="unit btn23">23</button>
-                <button class="unit btn24">24</button>
-                <button class="unit btn25">25</button>
-                <button class="unit btn26">26</button>
-                <button class="unit btn27">27</button>
-                <button class="unit btn28">28</button>
-                <button class="unit btn29">29</button>
-                <button class="unit btn30">30</button>
-            </div>
-        </div>
-        <div class="btn-group2">
-            <button class="backToEss-btn">Zurück</button>
-        </div>
-    </div>
+DeBtnUnit.onclick = () => {
+    unitPopup.classList.remove('active');
+    main.classList.remove('active');
+    quizSection.classList.add('active');
+    quizBox.classList.add('active');
+    backToUnit.classList.add('active');
+    activeUnit = 'De';
+    
+    showQuestions(0);
+    questionCounter(1);
+    headerScore();
+}
 
-    <div class="unit-popup-uz">
-        <h2>Darslikni tanlang</h2>
-        <div class="unit-container">
-            <div class="unit-list-uz">
-                <button class="unit tugma1">1</button>
-                <button class="unit tugma2">2</button>
-                <button class="unit tugma3">3</button>
-                <button class="unit tugma4">4</button>
-                <button class="unit tugma5">5</button>
-                <button class="unit tugma6">6</button>
-                <button class="unit tugma7">7</button>
-                <button class="unit tugma8">8</button>
-                <button class="unit tugma9">9</button>
-                <button class="unit tugma10">10</button>
-            </div>
-            <div class="unit-list-uz">
-                <button class="unit tugma11">11</button>
-                <button class="unit tugma12">12</button>
-                <button class="unit tugma13">13</button>
-                <button class="unit tugma14">14</button>
-                <button class="unit tugma15">15</button>
-                <button class="unit tugma16">16</button>
-                <button class="unit tugma17">17</button>
-                <button class="unit tugma18">18</button>
-                <button class="unit tugma19">19</button>
-                <button class="unit tugma20">20</button>
-            </div>
-            <div class="unit-list-uz">
-                <button class="unit tugma21">21</button>
-                <button class="unit tugma22">22</button>
-                <button class="unit tugma23">23</button>
-                <button class="unit tugma24">24</button>
-                <button class="unit tugma25">25</button>
-                <button class="unit tugma26">26</button>
-                <button class="unit tugma27">27</button>
-                <button class="unit tugma28">28</button>
-                <button class="unit tugma29">29</button>
-                <button class="unit tugma30">30</button>
-            </div>
-        </div>
-        <div class="btn-group3">
-            <button class="backToEssUz-btn">Orqaga</button>
-        </div>
-    </div>
-    <script src="questions1.js"></script> 
-    <script src="questions2.js"></script>
-    <script src="questions3.js"></script>
-    <script src="questions4.js"></script>
-    <script src="questions5.js"></script>
-    <script src="savollar1.js"></script>
-    <script src="script.js"></script>
+backToEss.onclick = () => {
+    essentialsPopup.classList.add('active');
+    unitPopup.classList.remove('active');
+}
 
-</body>
-</html>
+UzBtnUnit.onclick = () => {
+    unitPopupUz.classList.remove('active');
+    main.classList.remove('active');
+    quizSection.classList.add('active');
+    quizBox.classList.add('active');
+    backToUnitUz.classList.add('active');
+    activeUnit = 'Uz';
+    
+    showQuestions(0);
+    questionCounter(1);
+    headerScore();
+}
+
+backToEssUz.onclick = () => {
+    essentialsPopup.classList.add('active');
+    unitPopupUz.classList.remove('active');
+}
+
+DeBtnUnit1.onclick = () => {
+    questions = questions1;
+}
+
+DeBtnUnit2.onclick = () => {
+    questions = questions2;
+}
+
+DeBtnUnit3.onclick = () => {
+    questions = questions3;
+}
+
+DeBtnUnit4.onclick = () => {
+    questions = questions4;
+}
+
+DeBtnUnit5.onclick = () => {
+    questions = questions5;
+}
+
+DeBtnUnit6.onclick = () => {
+    questions = questions6;
+}
+
+DeBtnUnit7.onclick = () => {
+    questions = questions7;
+}
+
+DeBtnUnit11.onclick = () => {
+    questions = questions11;
+}
+
+UzBtnUnit1.onclick = () => {
+    questions = savollar1;
+}
+
+UzBtnUnit2.onclick = () => {
+    questions = savollar2;
+}
+
+backToUnit.onclick = () => {
+    quizSection.classList.remove('active');
+    main.classList.add('active');
+    nextBtn.classList.remove('active');
+    
+    if (activeUnit == 'De')
+        unitPopup.classList.add('active');
+    else
+        unitPopupUz.classList.add('active');
+        
+    questionCount = 0;
+    questionNumb = 1;
+    userScore = 0;
+}
+
+nextBtn.onclick = () => {
+    if (questionCount < questions.length - 1) { // -1, weil Array bei 0 anfängt;  
+        questionCount++;
+        showQuestions(questionCount);
+        questionNumb++;
+        questionCounter(questionNumb);
+        nextBtn.classList.remove('active');
+    }
+    else
+        showResultBox();
+}
+
+tryAgain.onclick = () => {
+    quizBox.classList.add('active');
+    resultBox.classList.remove('active');
+    nextBtn.classList.remove('active');
+
+    questionCount = 0;
+    questionNumb = 1;
+    userScore = 0;
+
+    showQuestions(questionCount);
+    questionCounter(questionNumb);
+    headerScore();
+}
+
+goHome.onclick = () => {
+    resultBox.classList.remove('active');
+    quizSection.classList.remove('active');
+    nextBtn.classList.remove('active');
+
+    questionCount = 0;
+    questionNumb = 1;
+    userScore = 0;
+}
+
+// Fragen und Optionen aus dem Array holen
+function showQuestions(index) {
+    const questionText = document.querySelector('.question-text');
+    questionText.textContent = `${questions[index].numb}. ${questions[index].question}`;
+    
+    let optionTag = `<div class="option"><span>${questions[index].options[0]}</span></div>
+    <div class="option"><span>${questions[index].options[1]}</span></div>
+    <div class="option"><span>${questions[index].options[2]}</span></div>
+    <div class="option"><span>${questions[index].options[3]}</span></div>`;
+    
+    optionList.innerHTML = optionTag;
+
+    const options = document.querySelectorAll('.option');
+    options.forEach((option) => {
+        option.addEventListener('click', function() {
+            optionSelected(this);
+        });
+    });
+}
+
+function optionSelected(answer) {
+    let userAnswer = answer.textContent;
+    let correctAnswer = questions[questionCount].answer;
+    let allOptions = optionList.children.length; // '.children' gibt alle Kinderelemente eines Elements zurück.
+    
+    if (userAnswer == correctAnswer) {
+        answer.classList.add('correct');
+        userScore += 1;
+        headerScore();
+    }
+    else {
+        answer.classList.add('incorrect');
+        // korrekte Antwort hervorheben
+        for (let i = 0; i < allOptions; i++)
+            if (optionList.children[i].textContent == correctAnswer)
+                optionList.children[i].setAttribute('class', 'option correct');
+    }
+    // wenn Nutzer ausgewählt hat, dann keine Auswahl mehr möglich
+    for (let i = 0; i < allOptions; i++) 
+        optionList.children[i].classList.add('disabled');
+
+    nextBtn.classList.add('active');
+}
+
+function questionCounter(index) {
+    const questionTotal = document.querySelector('.question-total');
+    questionTotal.textContent = `${index} von ${questions.length} Fragen`;
+}
+
+function headerScore() {
+    const headerScoreText = document.querySelector('.header-score');
+    headerScoreText.textContent = `Spielstand: ${userScore} / ${questions.length}`;
+}
+
+function showResultBox() {
+    quizBox.classList.remove('active');
+    resultBox.classList.add('active');
+    
+    const scoreText = document.querySelector('.score-text');
+    scoreText.textContent = `Du hast ${userScore} von ${questions.length} Fragen richtig beantwortet.`;
+    
+    const circularProgress = document.querySelector('.circular-progress');
+    const progressValue = document.querySelector('.progress-value');
+    
+    let progressStartValue = -1;
+    let progressEndValue = (userScore / questions.length) * 100;
+    let speed = 20;
+    
+    let progress = setInterval(() => {
+        progressStartValue++;
+        progressValue.textContent = `${progressStartValue}%`;
+        circularProgress.style.background = `conic-gradient(#5bf846 ${progressStartValue * 3.6}deg, white 0deg)`; // "style" ermöglicht, CSS-Regeln zu setzen oder zu ändern.
+        if (progressStartValue == progressEndValue)
+            clearInterval(progress);
+    }, speed);
+}
+
+// });
+    
