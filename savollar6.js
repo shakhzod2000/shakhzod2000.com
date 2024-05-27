@@ -37,10 +37,10 @@ let savollar6 = [
         question: "community",
         answer: "D. jamiyat",
         options: [
-            "A. jamiyat",
+            "A. aholi",
             "B. guruh",
             "C. jamoa",
-            "D. aholi"
+            "D. jamiyat"
         ]
     },
     {
