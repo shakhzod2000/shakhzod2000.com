@@ -34,7 +34,7 @@ let questions11 = [
     },
     {
         numb: 4,
-        question: "collect",
+        question: "to collect",
         answer: "D. sammeln",
         options: [
             "A. zerstören",
@@ -45,7 +45,7 @@ let questions11 = [
     },
     {
         numb: 5,
-        question: "compete",
+        question: "to compete",
         answer: "B. konkurrieren",
         options: [
             "A. kooperieren",
@@ -68,11 +68,11 @@ let questions11 = [
     {
         numb: 7,
         question: "creature",
-        answer: "C. Kreatur",
+        answer: "C. Geschöpf",
         options: [
             "A. Pflanze",
             "B. Fisch",
-            "C. Kreatur",
+            "C. Geschöpf",
             "D. Mineral"
         ]
     },
@@ -114,15 +114,15 @@ let questions11 = [
         question: "ground",
         answer: "C. Boden",
         options: [
-            "A. Himmel",
-            "B. Wasser",
+            "A. Fundament",
+            "B. Oberfläche",
             "C. Boden",
-            "D. Luft"
+            "D. Feld"
         ]
     },
     {
         numb: 12,
-        question: "introduce",
+        question: "to introduce",
         answer: "A. vorstellen",
         options: [
             "A. vorstellen",
@@ -133,7 +133,7 @@ let questions11 = [
     },
     {
         numb: 13,
-        question: "marry",
+        question: "to marry",
         answer: "B. heiraten",
         options: [
             "A. treffen",
@@ -144,7 +144,7 @@ let questions11 = [
     },
     {
         numb: 14,
-        question: "prepare",
+        question: "to prepare",
         answer: "C. vorbereiten",
         options: [
             "A. beenden",
@@ -155,7 +155,7 @@ let questions11 = [
     },
     {
         numb: 15,
-        question: "sail",
+        question: "to sail",
         answer: "B. segeln",
         options: [
             "A. schwimmen",
@@ -177,22 +177,22 @@ let questions11 = [
     },
     {
         numb: 17,
-        question: "spend",
+        question: "to spend",
         answer: "D. verbringen",
         options: [
             "A. sparen",
             "B. investieren",
-            "C. ausgeben",
+            "C. verleihen",
             "D. verbringen"
         ]
     },
     {
         numb: 18,
         question: "strange",
-        answer: "B. seltsam",
+        answer: "B. außergewöhnlich",
         options: [
             "A. bekannt",
-            "B. seltsam",
+            "B. außergewöhnlich",
             "C. vertraut",
             "D. normal"
         ]
@@ -210,7 +210,7 @@ let questions11 = [
     },
     {
         numb: 20,
-        question: "wake",
+        question: "to wake",
         answer: "C. aufwachen",
         options: [
             "A. schlafen",
@@ -218,5 +218,5 @@ let questions11 = [
             "C. aufwachen",
             "D. einschlafen"
         ]
-    },
+    }
 ];
