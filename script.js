@@ -25,6 +25,10 @@ const DeBtnUnit11 = document.querySelector('.btn11');
 const UzBtnUnit = document.querySelector('.unit-container-uz');
 const UzBtnUnit1 = document.querySelector('.tugma1');
 const UzBtnUnit2 = document.querySelector('.tugma2');
+const UzBtnUnit3 = document.querySelector('.tugma3');
+const UzBtnUnit4 = document.querySelector('.tugma4');
+const UzBtnUnit5 = document.querySelector('.tugma5');
+const UzBtnUnit6 = document.querySelector('.tugma6');
 const quizSection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 const optionList = document.querySelector('.option-list');
@@ -152,6 +156,22 @@ UzBtnUnit1.onclick = () => {
 
 UzBtnUnit2.onclick = () => {
     questions = savollar2;
+}
+
+UzBtnUnit3.onclick = () => {
+    questions = savollar3;
+}
+
+UzBtnUnit4.onclick = () => {
+    questions = savollar4;
+}
+
+UzBtnUnit5.onclick = () => {
+    questions = savollar5;
+}
+
+UzBtnUnit6.onclick = () => {
+    questions = savollar6;
 }
 
 backToUnit.onclick = () => {
