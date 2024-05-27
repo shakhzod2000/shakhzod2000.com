@@ -26,10 +26,10 @@ let savollar3 = [
         question: "chart",
         answer: "D. diagramma",
         options: [
-            "A. kitob",
+            "A. ma'lumot",
             "B. xat",
             "C. rasm",
-            "D. jadval"
+            "D. diagramma"
         ]
     },
     {
