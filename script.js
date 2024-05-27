@@ -302,5 +302,7 @@ function showResultBox() {
     }, speed);
 }
 
+document.addEventListener('dblclick',function(e){
+    e.preventDefault();
+});
 // });
-    
