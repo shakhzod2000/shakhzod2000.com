@@ -5,14 +5,15 @@ const popupInfo = document.querySelector('.popup-info');
 const exitBtn = document.querySelector('.exit-btn');
 const main = document.querySelector('.main');
 const germanBtn = document.querySelector('.german-btn');
-const uzbekBtn = document.querySelector('.uzbek-btn');
+const englishBtn = document.querySelector('.english-btn');
 const essentialsPopup = document.querySelector('.essentials-popup');
+const EssPopupTitle = document.querySelector('.essentials-popup h2');
 const essentialsBtn = document.querySelector('.essentials-btn');
 const backToLang = document.querySelector('.backToLang-btn');
 const unitPopup = document.querySelector('.unit-popup');
 const backToEss = document.querySelector('.backToEss-btn');
-const unitPopupUz = document.querySelector('.unit-popup-uz');
-const backToEssUz = document.querySelector('.backToEssUz-btn');
+const unitPopupEn = document.querySelector('.unit-popup-en');
+const backToEssEn = document.querySelector('.backToEssEn-btn');
 const DeBtnUnit = document.querySelector('.unit-container');
 const DeBtnUnit1 = document.querySelector('.btn1');
 const DeBtnUnit2 = document.querySelector('.btn2');
@@ -22,18 +23,18 @@ const DeBtnUnit5 = document.querySelector('.btn5');
 const DeBtnUnit6 = document.querySelector('.btn6');
 const DeBtnUnit7 = document.querySelector('.btn7');
 const DeBtnUnit11 = document.querySelector('.btn11');
-const UzBtnUnit = document.querySelector('.unit-container-uz');
-const UzBtnUnit1 = document.querySelector('.tugma1');
-const UzBtnUnit2 = document.querySelector('.tugma2');
-const UzBtnUnit3 = document.querySelector('.tugma3');
-const UzBtnUnit4 = document.querySelector('.tugma4');
-const UzBtnUnit5 = document.querySelector('.tugma5');
-const UzBtnUnit6 = document.querySelector('.tugma6');
+const EnBtnUnit = document.querySelector('.unit-container-en');
+const EnBtnUnit1 = document.querySelector('.tugma1');
+const EnBtnUnit2 = document.querySelector('.tugma2');
+const EnBtnUnit3 = document.querySelector('.tugma3');
+const EnBtnUnit4 = document.querySelector('.tugma4');
+const EnBtnUnit5 = document.querySelector('.tugma5');
+const EnBtnUnit6 = document.querySelector('.tugma6');
 const quizSection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 const optionList = document.querySelector('.option-list');
 const backToUnit = document.querySelector('.backToUnit-btn');
-const backToUnitUz = document.querySelector('.backToUnit-btn');
+const backToUnitEn = document.querySelector('.backToUnit-btn');
 const nextBtn = document.querySelector('.next-btn');
 const resultBox = document.querySelector('.result-box');
 const tryAgain = document.querySelector('.tryAgain-btn');
@@ -54,12 +55,29 @@ germanBtn.onclick = () => {
     popupInfo.classList.remove('active');
     essentialsPopup.classList.add('active');
     activeLanguage = 'De';
+    translate();
 }
 
-uzbekBtn.onclick = () => {
+englishBtn.onclick = () => {
     popupInfo.classList.remove('active');
     essentialsPopup.classList.add('active');
-    activeLanguage = 'Uz';
+    activeLanguage = 'En';
+    translate();
+}
+
+function translate() {
+    if (activeLanguage == 'En') {
+        EssPopupTitle.textContent = "Select desired book to practise";
+        backToLang.textContent = "Back";
+        backToUnit.textContent = "Back"
+        nextBtn.textContent = "Next";
+    }
+    else {
+        EssPopupTitle.textContent = "Wähle gewünschtes Buch zu üben";
+        backToLang.textContent = "Zurück";
+        backToUnit.textContent = "Zurück"
+        nextBtn.textContent = "Weiter";
+    }
 }
 
 exitBtn.onclick = () => {
@@ -72,7 +90,7 @@ essentialsBtn.onclick = () => {
     if (activeLanguage == 'De') 
         unitPopup.classList.add('active');
     else
-        unitPopupUz.classList.add('active');
+        unitPopupEn.classList.add('active');
 }
 
 backToLang.onclick = () => {
@@ -100,22 +118,22 @@ backToEss.onclick = () => {
     unitPopup.classList.remove('active');
 }
 
-UzBtnUnit.onclick = () => {
-    unitPopupUz.classList.remove('active');
+EnBtnUnit.onclick = () => {
+    unitPopupEn.classList.remove('active');
     main.classList.remove('active');
     quizSection.classList.add('active');
     quizBox.classList.add('active');
-    backToUnitUz.classList.add('active');
-    activeUnit = 'Uz';
+    backToUnitEn.classList.add('active');
+    activeUnit = 'En';
     
     showQuestions(0);
     questionCounter(1);
     headerScore();
 }
 
-backToEssUz.onclick = () => {
+backToEssEn.onclick = () => {
     essentialsPopup.classList.add('active');
-    unitPopupUz.classList.remove('active');
+    unitPopupEn.classList.remove('active');
 }
 
 DeBtnUnit1.onclick = () => {
@@ -150,27 +168,27 @@ DeBtnUnit11.onclick = () => {
     questions = questions11;
 }
 
-UzBtnUnit1.onclick = () => {
+EnBtnUnit1.onclick = () => {
     questions = savollar1;
 }
 
-UzBtnUnit2.onclick = () => {
+EnBtnUnit2.onclick = () => {
     questions = savollar2;
 }
 
-UzBtnUnit3.onclick = () => {
+EnBtnUnit3.onclick = () => {
     questions = savollar3;
 }
 
-UzBtnUnit4.onclick = () => {
+EnBtnUnit4.onclick = () => {
     questions = savollar4;
 }
 
-UzBtnUnit5.onclick = () => {
+EnBtnUnit5.onclick = () => {
     questions = savollar5;
 }
 
-UzBtnUnit6.onclick = () => {
+EnBtnUnit6.onclick = () => {
     questions = savollar6;
 }
 
@@ -182,7 +200,7 @@ backToUnit.onclick = () => {
     if (activeUnit == 'De')
         unitPopup.classList.add('active');
     else
-        unitPopupUz.classList.add('active');
+        unitPopupEn.classList.add('active');
         
     questionCount = 0;
     questionNumb = 1;
@@ -271,12 +289,18 @@ function optionSelected(answer) {
 
 function questionCounter(index) {
     const questionTotal = document.querySelector('.question-total');
-    questionTotal.textContent = `${index} von ${questions.length} Fragen`;
+    if (activeLanguage == 'En')
+        questionTotal.textContent = `${index} of ${questions.length} questions`;
+    else
+        questionTotal.textContent = `${index} von ${questions.length} Fragen`;
 }
 
 function headerScore() {
     const headerScoreText = document.querySelector('.header-score');
-    headerScoreText.textContent = `Spielstand: ${userScore} / ${questions.length}`;
+    if (activeLanguage == 'En')
+        headerScoreText.textContent = `Score: ${userScore} / ${questions.length}`;
+    else
+        headerScoreText.textContent = `Spielstand: ${userScore} / ${questions.length}`;
 }
 
 function showResultBox() {
@@ -305,4 +329,6 @@ function showResultBox() {
 document.addEventListener('dblclick',function(e){
     e.preventDefault();
 });
+
 // });
+    
