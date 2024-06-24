@@ -186,7 +186,8 @@ body {
 
 .popup-info .languages-btn {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: calc(100% * 0.2);
     align-items: center;
     border-bottom: 2px solid #fff;
     padding: 35px 10px 45px;
@@ -194,9 +195,6 @@ body {
 }
 
 .popup-info .languages-btn .info-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     width: calc(70% * 0.4);
     padding: 40px 50px;
     border: 2px solid #fff;
@@ -218,13 +216,13 @@ body {
     background-size: cover;
     background-position: center;
 }
-.popup-info .languages-btn .info-btn:nth-child(2) {
+/* .popup-info .languages-btn .info-btn:nth-child(2) {
     background-image: url('Bilder/fahne-usa.jpg');
     background-size: cover;
     background-position: center;
-}
-.popup-info .languages-btn .info-btn:nth-child(3) {
-    background-image: url('Bilder/fahne-usbekistan.jpg');
+} */
+.popup-info .languages-btn .info-btn:nth-child(2) {
+    background-image: url('Bilder/fahne-usa.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -326,7 +324,7 @@ body {
     color: #fafaf8;
 }
 
-.unit-popup-uz {
+.unit-popup-en {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -340,26 +338,26 @@ body {
     transition: .3s ease;
 }
 
-.unit-popup-uz.active {
+.unit-popup-en.active {
     opacity: 1;
     pointer-events: auto;
     transition: .3s ease;
 }
 
-.unit-popup-uz h2 {
+.unit-popup-en h2 {
     font-size: 23px;
     color: white;
     margin: 5px;
 }
 
-.unit-popup-uz .unit-list-uz {
+.unit-popup-en .unit-list-en {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 0px;
 }
 
-.unit-popup-uz .unit-list-uz .unit {
+.unit-popup-en .unit-list-en .unit {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -374,11 +372,11 @@ body {
     cursor: pointer;
 }
 
-.unit-popup-uz .unit-list-uz .unit:hover {
+.unit-popup-en .unit-list-en .unit:hover {
     background:#5bf846;
 }
 
-.btn-group3 .backToEssUz-btn {
+.btn-group3 .backToEssEn-btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -395,7 +393,7 @@ body {
     margin-top: 10px;
 }
 
-.btn-group3 .backToEssUz-btn:hover {
+.btn-group3 .backToEssEn-btn:hover {
     background:tomato;
     color: #fafaf8;
 }
@@ -871,27 +869,27 @@ body {
         color: #fafaf8;
     }
     
-    .unit-popup-uz {
+    .unit-popup-en {
         width: calc(100vw * 0.75);
         padding: 10px 5px;
     }
     
-    .unit-popup-uz.active {
+    .unit-popup-en.active {
         opacity: 1;
         pointer-events: auto;
         transition: .3s ease;
     }
     
-    .unit-popup-uz h2 {
+    .unit-popup-en h2 {
         font-size: 20px;
         margin-bottom: 10px;
     }
     
-    .unit-popup-uz .unit-list-uz {
+    .unit-popup-en .unit-list-en {
         padding: 10px 0px;
     }
     
-    .unit-popup-uz .unit-list-uz .unit {
+    .unit-popup-en .unit-list-en .unit {
         padding: 12px 10px;
         font-size: 10px;
     }
