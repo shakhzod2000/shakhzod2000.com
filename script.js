@@ -22,6 +22,7 @@ const DeBtnUnit4 = document.querySelector('.btn4');
 const DeBtnUnit5 = document.querySelector('.btn5');
 const DeBtnUnit6 = document.querySelector('.btn6');
 const DeBtnUnit7 = document.querySelector('.btn7');
+const DeBtnUnit8 = document.querySelector('.btn8');
 const DeBtnUnit11 = document.querySelector('.btn11');
 const EnBtnUnit = document.querySelector('.unit-container-en');
 const EnBtnUnit1 = document.querySelector('.tugma1');
@@ -31,6 +32,7 @@ const EnBtnUnit4 = document.querySelector('.tugma4');
 const EnBtnUnit5 = document.querySelector('.tugma5');
 const EnBtnUnit6 = document.querySelector('.tugma6');
 const EnBtnUnit7 = document.querySelector('.tugma7');
+const EnBtnUnit8 = document.querySelector('.tugma8');
 const quizSection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 const optionList = document.querySelector('.option-list');
@@ -38,6 +40,7 @@ const backToUnit = document.querySelector('.backToUnit-btn');
 const backToUnitEn = document.querySelector('.backToUnit-btn');
 const nextBtn = document.querySelector('.next-btn');
 const resultBox = document.querySelector('.result-box');
+const resultBoxTitle = document.querySelector('.result-box h2');
 const tryAgain = document.querySelector('.tryAgain-btn');
 const goHome = document.querySelector('.goHome-btn');
 
@@ -72,12 +75,18 @@ function translate() {
         backToLang.textContent = "Back";
         backToUnit.textContent = "Back"
         nextBtn.textContent = "Next";
+        resultBoxTitle.textContent = "Quiz Result!";
+        goHome.textContent = "Go Home";
+        tryAgain.textContent = "Try Again";
     }
     else {
         EssPopupTitle.textContent = "Wähle gewünschtes Buch zu üben";
         backToLang.textContent = "Zurück";
         backToUnit.textContent = "Zurück"
         nextBtn.textContent = "Weiter";
+        resultBoxTitle.textContent = "Quiz Ergebnis!";
+        goHome.textContent = "Startseite";
+        tryAgain.textContent = "Erneut versuchen";
     }
 }
 
@@ -165,6 +174,10 @@ DeBtnUnit7.onclick = () => {
     questions = questions7;
 }
 
+DeBtnUnit8.onclick = () => {
+    questions = questions8;
+}
+
 DeBtnUnit11.onclick = () => {
     questions = questions11;
 }
@@ -195,6 +208,10 @@ EnBtnUnit6.onclick = () => {
 
 EnBtnUnit7.onclick = () => {
     questions = savollar7;
+}
+
+EnBtnUnit8.onclick = () => {
+    questions = savollar8;
 }
 
 backToUnit.onclick = () => {
@@ -313,7 +330,10 @@ function showResultBox() {
     resultBox.classList.add('active');
     
     const scoreText = document.querySelector('.score-text');
-    scoreText.textContent = `Du hast ${userScore} von ${questions.length} Fragen richtig beantwortet.`;
+    if (activeLanguage == 'En')
+        scoreText.textContent = `You got ${userScore} out of ${questions.length} questions correct.`;
+    else
+        scoreText.textContent = `Du hast ${userScore} von ${questions.length} Fragen richtig beantwortet.`;
     
     const circularProgress = document.querySelector('.circular-progress');
     const progressValue = document.querySelector('.progress-value');
