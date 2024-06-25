@@ -37,6 +37,7 @@ const EnBtnUnit7 = document.querySelector('.tugma7');
 const EnBtnUnit8 = document.querySelector('.tugma8');
 const EnBtnUnit9 = document.querySelector('.tugma9');
 const EnBtnUnit10 = document.querySelector('.tugma10');
+const EnBtnUnit11 = document.querySelector('.tugma11');
 const quizSection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 const optionList = document.querySelector('.option-list');
@@ -232,6 +233,10 @@ EnBtnUnit9.onclick = () => {
 
 EnBtnUnit10.onclick = () => {
     questions = savollar10;
+}
+
+EnBtnUnit11.onclick = () => {
+    questions = savollar11;
 }
 
 backToUnit.onclick = () => {
