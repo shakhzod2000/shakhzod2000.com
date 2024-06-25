@@ -23,6 +23,8 @@ const DeBtnUnit5 = document.querySelector('.btn5');
 const DeBtnUnit6 = document.querySelector('.btn6');
 const DeBtnUnit7 = document.querySelector('.btn7');
 const DeBtnUnit8 = document.querySelector('.btn8');
+const DeBtnUnit9 = document.querySelector('.btn9');
+const DeBtnUnit10 = document.querySelector('.btn10');
 const DeBtnUnit11 = document.querySelector('.btn11');
 const EnBtnUnit = document.querySelector('.unit-container-en');
 const EnBtnUnit1 = document.querySelector('.tugma1');
@@ -33,6 +35,8 @@ const EnBtnUnit5 = document.querySelector('.tugma5');
 const EnBtnUnit6 = document.querySelector('.tugma6');
 const EnBtnUnit7 = document.querySelector('.tugma7');
 const EnBtnUnit8 = document.querySelector('.tugma8');
+const EnBtnUnit9 = document.querySelector('.tugma9');
+const EnBtnUnit10 = document.querySelector('.tugma10');
 const quizSection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 const optionList = document.querySelector('.option-list');
@@ -178,6 +182,14 @@ DeBtnUnit8.onclick = () => {
     questions = questions8;
 }
 
+DeBtnUnit9.onclick = () => {
+    questions = questions9;
+}
+
+DeBtnUnit10.onclick = () => {
+    questions = questions10;
+}
+
 DeBtnUnit11.onclick = () => {
     questions = questions11;
 }
@@ -212,6 +224,14 @@ EnBtnUnit7.onclick = () => {
 
 EnBtnUnit8.onclick = () => {
     questions = savollar8;
+}
+
+EnBtnUnit9.onclick = () => {
+    questions = savollar9;
+}
+
+EnBtnUnit10.onclick = () => {
+    questions = savollar10;
 }
 
 backToUnit.onclick = () => {
