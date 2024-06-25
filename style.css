@@ -41,7 +41,6 @@ body {
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
-    /* transition: color .3s ease; */
 }
 
 
@@ -133,7 +132,6 @@ body {
     letter-spacing: 1px;
     font-weight: 600;
     cursor: pointer;
-    /* transition: .5s; */
 }
 
 .home-content .start-btn:hover {
@@ -160,14 +158,12 @@ body {
     padding: 10px 10px;
     opacity: 0; 
     pointer-events: none;
-    transition: .3s ease;
-}  
+}
 
 .popup-info.active {
-    /* transform: translate(-50%, -50%); */
     opacity: 1;
     pointer-events: auto;
-    transition: .3s ease;
+    transition: .1s ease;
 }
 
 .popup-info h2 {
@@ -261,13 +257,13 @@ body {
     padding: 20px 15px;
     opacity: 0; 
     pointer-events: none;
-    transition: .3s ease;
+    transition: .1s ease;
 }
 
 .unit-popup.active {
     opacity: 1;
     pointer-events: auto;
-    transition: .3s ease;
+    transition: .1s ease;
 }
 
 .unit-popup h2 {
@@ -335,13 +331,13 @@ body {
     padding: 20px 15px;
     opacity: 0; 
     pointer-events: none;
-    transition: .3s ease;
+    transition: .1s ease;
 }
 
 .unit-popup-en.active {
     opacity: 1;
     pointer-events: auto;
-    transition: .3s ease;
+    transition: .1s ease;
 }
 
 .unit-popup-en h2 {
@@ -410,13 +406,13 @@ body {
     padding: 20px 15px;
     opacity: 0; 
     pointer-events: none;
-    transition: .3s ease;
+    transition: .1s ease;
 }
 
 .essentials-popup.active {
     opacity: 1;
     pointer-events: auto;
-    transition: .3s ease;
+    transition: .1s ease;
 }
 
 .essentials-popup h2 {
@@ -484,8 +480,8 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1;
-    transition: .8s ease-in-out;
-    transition-delay: .25s;
+    transition: .6s ease-in-out;
+    transition-delay: .1s;
 }
 
 .quiz-section.active {
@@ -514,8 +510,8 @@ body {
     opacity: 1; /* macht das Element vollständig undurchsichtig(intransparent) */
     pointer-events: auto; /* ermöglicht es dem Element, auf Mausklicks oder -bewegungen zu reagieren */
     transform: scale(1);
-    transition: 1s ease;
-    transition-delay: 1s;
+    transition: .1s ease;
+    transition-delay: .1s;
 }
 
 .quiz-box h1 {
@@ -660,7 +656,7 @@ body {
     align-items: center;
     opacity: 0;
     pointer-events: none;
-    transition: .3s ease;
+    transition: .1s ease;
 }
 
 .quiz-section .result-box.active {
@@ -813,7 +809,7 @@ body {
     }
     .essentials-popup {
         width: calc(100vw * 0.75);
-        padding: 10px;
+        padding: 9px;
     }
     
     .essentials-popup h2 {
@@ -837,7 +833,7 @@ body {
     .unit-popup.active {
         opacity: 1;
         pointer-events: auto;
-        transition: .3s ease;
+        transition: .1s ease;
     }
     
     .unit-popup h2 {
@@ -877,7 +873,7 @@ body {
     .unit-popup-en.active {
         opacity: 1;
         pointer-events: auto;
-        transition: .3s ease;
+        transition: .1s ease;
     }
     
     .unit-popup-en h2 {
