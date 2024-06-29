@@ -8,7 +8,10 @@ const germanBtn = document.querySelector('.german-btn');
 const englishBtn = document.querySelector('.english-btn');
 const essentialsPopup = document.querySelector('.essentials-popup');
 const EssPopupTitle = document.querySelector('.essentials-popup h2');
-const essentialsBtn = document.querySelector('.essentials-btn');
+// const essentialsBtn = document.querySelectorAll('.essentials-btn');
+const errorPopup = document.querySelector('.error-popup');
+const errorPopupTitle = document.querySelector('.error-popup h2');
+const OKBtn = document.querySelector('.OK-btn');
 const backToLang = document.querySelector('.backToLang-btn');
 const unitPopup = document.querySelector('.unit-popup');
 const backToEss = document.querySelector('.backToEss-btn');
@@ -28,6 +31,23 @@ const DeBtnUnit10 = document.querySelector('.btn10');
 const DeBtnUnit11 = document.querySelector('.btn11');
 const DeBtnUnit12 = document.querySelector('.btn12');
 const DeBtnUnit13 = document.querySelector('.btn13');
+const DeBtnUnit14 = document.querySelector('.btn14');
+const DeBtnUnit15 = document.querySelector('.btn15');
+const DeBtnUnit16 = document.querySelector('.btn16');
+const DeBtnUnit17 = document.querySelector('.btn17');
+const DeBtnUnit18 = document.querySelector('.btn18');
+const DeBtnUnit19 = document.querySelector('.btn19');
+const DeBtnUnit20 = document.querySelector('.btn20');
+const DeBtnUnit21 = document.querySelector('.btn21');
+const DeBtnUnit22 = document.querySelector('.btn22');
+const DeBtnUnit28 = document.querySelector('.btn23');
+const DeBtnUnit29 = document.querySelector('.btn24');
+const DeBtnUnit23 = document.querySelector('.btn25');
+const DeBtnUnit24 = document.querySelector('.btn26');
+const DeBtnUnit25 = document.querySelector('.btn27');
+const DeBtnUnit26 = document.querySelector('.btn28');
+const DeBtnUnit27 = document.querySelector('.btn29');
+const DeBtnUnit30 = document.querySelector('.btn30');
 const EnBtnUnit = document.querySelector('.unit-container-en');
 const EnBtnUnit1 = document.querySelector('.tugma1');
 const EnBtnUnit2 = document.querySelector('.tugma2');
@@ -42,6 +62,23 @@ const EnBtnUnit10 = document.querySelector('.tugma10');
 const EnBtnUnit11 = document.querySelector('.tugma11');
 const EnBtnUnit12 = document.querySelector('.tugma12');
 const EnBtnUnit13 = document.querySelector('.tugma13');
+const EnBtnUnit14 = document.querySelector('.tugma14');
+const EnBtnUnit15 = document.querySelector('.tugma15');
+const EnBtnUnit16 = document.querySelector('.tugma16');
+const EnBtnUnit17 = document.querySelector('.tugma17');
+const EnBtnUnit18 = document.querySelector('.tugma18');
+const EnBtnUnit19 = document.querySelector('.tugma19');
+const EnBtnUnit20 = document.querySelector('.tugma20');
+const EnBtnUnit21 = document.querySelector('.tugma21');
+const EnBtnUnit22 = document.querySelector('.tugma22');
+const EnBtnUnit28 = document.querySelector('.tugma23');
+const EnBtnUnit29 = document.querySelector('.tugma24');
+const EnBtnUnit23 = document.querySelector('.tugma25');
+const EnBtnUnit24 = document.querySelector('.tugma26');
+const EnBtnUnit25 = document.querySelector('.tugma27');
+const EnBtnUnit26 = document.querySelector('.tugma28');
+const EnBtnUnit27 = document.querySelector('.tugma29');
+const EnBtnUnit30 = document.querySelector('.tugma30');
 const quizSection = document.querySelector('.quiz-section');
 const quizBox = document.querySelector('.quiz-box');
 const optionList = document.querySelector('.option-list');
@@ -87,6 +124,7 @@ function translate() {
         resultBoxTitle.textContent = "Quiz Result!";
         goHome.textContent = "Go Home";
         tryAgain.textContent = "Try Again";
+        errorPopupTitle.textContent = "Not available yet";
     }
     else {
         EssPopupTitle.textContent = "Wähle gewünschtes Buch zu üben";
@@ -96,6 +134,7 @@ function translate() {
         resultBoxTitle.textContent = "Quiz Ergebnis!";
         goHome.textContent = "Startseite";
         tryAgain.textContent = "Erneut versuchen";
+        errorPopupTitle.textContent = "Noch nicht verfügbar";
     }
 }
 
@@ -104,13 +143,46 @@ exitBtn.onclick = () => {
     main.classList.remove('active');
 }
 
-essentialsBtn.onclick = () => {
-    essentialsPopup.classList.remove('active');
-    if (activeLanguage == 'De') 
-        unitPopup.classList.add('active');
-    else
-        unitPopupEn.classList.add('active');
+// essentialsBtn.onclick = () => {
+//     whichEssentialsBtn();
+//     essentialsPopup.classList.remove('active');
+//     if (activeLanguage == 'De') 
+//         unitPopup.classList.add('active');
+//     else
+//         unitPopupEn.classList.add('active');
+// }
+
+// function whichEssentialsBtn(event) {
+//     if (!event.target.classList.contains('essential E1'))
+//         console.log("Noch nicht verfügbar");
+// }
+
+// whichEssentialsBtn.forEach(container => {
+//     container.addEventListener('click', whichEssentialsBtn);
+// })
+
+const essentialsBtnContainers = document.querySelectorAll('.essentials-btn');
+
+function onEssentialClick(event) {
+    if (event.target.classList.contains('essential')) {
+        if (!event.target.classList.contains('E1')) {
+            errorPopup.classList.add('active');
+            OKBtn.onclick = () => {
+                errorPopup.classList.remove('active');
+            }
+            return;
+        }
+        essentialsPopup.classList.remove('active');
+        if (activeLanguage == 'De') 
+            unitPopup.classList.add('active');
+        else
+            unitPopupEn.classList.add('active');
+    }
 }
+
+essentialsBtnContainers.forEach(container => {
+    container.addEventListener('click', onEssentialClick);
+});
 
 backToLang.onclick = () => {
     popupInfo.classList.add('active');
@@ -207,6 +279,75 @@ DeBtnUnit13.onclick = () => {
     questions = questions13;
 }
 
+DeBtnUnit14.onclick = () => {
+    questions = questions14;
+}
+
+DeBtnUnit15.onclick = () => {
+    questions = questions15;
+}
+
+DeBtnUnit16.onclick = () => {
+    questions = questions16;
+}
+
+DeBtnUnit17.onclick = () => {
+    questions = questions17;
+}
+
+DeBtnUnit18.onclick = () => {
+    questions = questions18;
+}
+
+DeBtnUnit19.onclick = () => {
+    questions = questions19;
+}
+
+DeBtnUnit20.onclick = () => {
+    questions = questions20;
+}
+
+DeBtnUnit21.onclick = () => {
+    questions = questions21;
+}
+
+DeBtnUnit22.onclick = () => {
+    questions = questions22;
+}
+
+
+DeBtnUnit23.onclick = () => {
+    questions = questions23;
+}
+
+DeBtnUnit24.onclick = () => {
+    questions = questions24;
+}
+
+DeBtnUnit25.onclick = () => {
+    questions = questions25;
+}
+
+DeBtnUnit26.onclick = () => {
+    questions = questions26;
+}
+
+DeBtnUnit27.onclick = () => {
+    questions = questions27;
+}
+
+DeBtnUnit28.onclick = () => {
+    questions = questions28;
+}
+
+DeBtnUnit29.onclick = () => {
+    questions = questions29;
+}
+
+DeBtnUnit30.onclick = () => {
+    questions = questions30;
+}
+
 EnBtnUnit1.onclick = () => {
     questions = savollar1;
 }
@@ -257,6 +398,74 @@ EnBtnUnit12.onclick = () => {
 
 EnBtnUnit13.onclick = () => {
     questions = savollar13;
+}
+
+EnBtnUnit14.onclick = () => {
+    questions = savollar14;
+}
+
+EnBtnUnit15.onclick = () => {
+    questions = savollar15;
+}
+
+EnBtnUnit16.onclick = () => {
+    questions = savollar16;
+}
+
+EnBtnUnit17.onclick = () => {
+    questions = savollar17;
+}
+
+EnBtnUnit18.onclick = () => {
+    questions = savollar18;
+}
+
+EnBtnUnit19.onclick = () => {
+    questions = savollar19;
+}
+
+EnBtnUnit20.onclick = () => {
+    questions = savollar20;
+}
+
+EnBtnUnit21.onclick = () => {
+    questions = savollar21;
+}
+
+EnBtnUnit22.onclick = () => {
+    questions = savollar22;
+}
+
+EnBtnUnit23.onclick = () => {
+    questions = savollar23;
+}
+
+EnBtnUnit24.onclick = () => {
+    questions = savollar24;
+}
+
+EnBtnUnit25.onclick = () => {
+    questions = savollar25;
+}
+
+EnBtnUnit26.onclick = () => {
+    questions = savollar26;
+}
+
+EnBtnUnit27.onclick = () => {
+    questions = savollar27;
+}
+
+EnBtnUnit28.onclick = () => {
+    questions = savollar28;
+}
+
+EnBtnUnit29.onclick = () => {
+    questions = savollar29;
+}
+
+EnBtnUnit30.onclick = () => {
+    questions = savollar30;
 }
 
 backToUnit.onclick = () => {
