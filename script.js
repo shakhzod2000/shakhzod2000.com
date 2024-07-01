@@ -1,5 +1,3 @@
-// document.addEventListener('DOMContentLoaded', () => {
-
 const startBtn = document.querySelector('.start-btn');
 const popupInfo = document.querySelector('.popup-info');
 const exitBtn = document.querySelector('.exit-btn');
@@ -608,6 +606,3 @@ function showResultBox() {
 document.addEventListener('dblclick',function(e){
     e.preventDefault();
 });
-
-// });
-    
