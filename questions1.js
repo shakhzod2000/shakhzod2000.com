@@ -1,5 +1,3 @@
-// document.addEventListener('DOMContentLoaded', () => {
-
 let questions1 = [
     {
         numb: 1,
@@ -222,5 +220,3 @@ let questions1 = [
             ]
     }
 ];
-
-// });
